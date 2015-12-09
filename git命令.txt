@@ -8,4 +8,18 @@ git log：查看提交历史，以便确定回退到那个版本；
 git reflog：查看历史命令，以便确定要回到未来的哪个版本；
 git checkout -- file：丢弃工作区的修改；
 git reset HEAD file：撤销暂存区的修改；
-git rm file：删除一个文件
+git rm file：删除一个文件；
+git remote add url：将本地仓库和远程仓库关联，url是远程仓库的路径；
+git push -u origin master：第一次提交master分支的所有内容；
+git push origin master：提交最新修改；
+git clone url：从远程仓库克隆，url是远程仓库中的url；
+git checkout -b dev：创建并切换到dev分支；
+git branch dev：创建dev分支；
+git checkout dev：切换到dev分支；
+git branch：查看分支，当前分支的前面会标一个*；
+git merge dev：把当前分支和dev分支合并；
+git branch -d dev：删除dev分支；
+git log --graph：查看分支合并图；
+
+
+
