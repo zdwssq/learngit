@@ -11,15 +11,26 @@ git reset HEAD file：撤销暂存区的修改；
 git rm file：删除一个文件；
 git remote add url：将本地仓库和远程仓库关联，url是远程仓库的路径；
 git push -u origin master：第一次提交master分支的所有内容；
-git push origin master：提交最新修改；
+git push origin dev：提交分支最新修改；
 git clone url：从远程仓库克隆，url是远程仓库中的url；
 git checkout -b dev：创建并切换到dev分支；
+git checkout -b dev origin/dev：利用远程分支dev创建本地分支dev；
 git branch dev：创建dev分支；
 git checkout dev：切换到dev分支；
 git branch：查看分支，当前分支的前面会标一个*；
 git merge dev：把当前分支和dev分支合并；
-git branch -d dev：删除dev分支；
+git branch -d dev：删除dev分支（已经和master分支合并）；
+git branch -D dev：删除没有被合并的分支；
 git log --graph：查看分支合并图；
+git remote：查看远程仓库信息，加-v显示更详细的信息；
+
+多人协作的工作模式：
+1）首先试图用git push origin branchname推送自己的修改；
+2）如果推送失败，则因为远程分支比你的本地更新，则需先用git pull试图合并；
+3）如果合并冲突，则解决冲突，并在本地提交；
+4）没有冲突或者冲突解决掉之后，再用git push origin branchname推送就能成功。
+
+
 
 
 
