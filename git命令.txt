@@ -1,0 +1,11 @@
+git init：把当前目录变成git可以管理的目录（工作区）；
+git add file：把file添加到缓存区；
+git commit file -m "xxx"：把file添加到本地版本库，xxx本版本的描述；
+git status：查看仓库当前状态；
+git diff HEAD -- file：查看工作区和版本库里面最新版本的区别（HEAD表示最新版本，HEAD^表示前一个版本）；
+git reset --hard commit_id：回到历史版本，commit_id是版本号；
+git log：查看提交历史，以便确定回退到那个版本；
+git reflog：查看历史命令，以便确定要回到未来的哪个版本；
+git checkout -- file：丢弃工作区的修改；
+git reset HEAD file：撤销暂存区的修改；
+git rm file：删除一个文件
